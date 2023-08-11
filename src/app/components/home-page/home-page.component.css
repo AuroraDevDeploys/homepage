@@ -1,0 +1,130 @@
+
+:host {
+    display: block; 
+    width: 100%; 
+    height: 100vh; 
+    background-color: #e4e4e4;
+}
+h1.display-4 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p.lead {
+    font-size: 1.3rem;
+}
+
+
+#principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(45deg,#1501c5,#1501c5, #3e024d);
+    color: #c9c9c9;
+    min-height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+#principal .container {
+    position: relative;
+    z-index: 1;
+}
+
+#principal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(138deg, #1501c5, #620188);
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    z-index: 0;
+}
+
+#proyectos,
+#nosotros,
+#contactos {
+    min-height: 100vh;
+    padding: 80px 0;
+    background-color: #e4e4e4;
+}
+
+
+
+#proyectos h2,
+#nosotros h2,
+#contactos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#proyectos p,
+#nosotros p,
+#contactos p {
+    font-size: 1.2rem;
+}
+.aurora-card {
+    background: rgba(255, 255, 255, 0.2);
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(7, 109, 226, 0.7), rgba(255, 255, 255, 0.4));
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.aurora-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(27, 4, 126, 0.7), rgba(255, 255, 255, 0.4));
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.aurora-card:hover::before {
+    opacity: 1;
+}
+
+.aurora-card i {
+    font-size: 3rem;
+    color: #1b047e;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.aurora-card h2 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.aurora-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: transform 0.3s ease-in-out;
+}
+
+.aurora-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.aurora-card:hover i,
+.aurora-card:hover h2,
+.aurora-card:hover p {
+    transform: translateY(-3px);
+}

@@ -1,0 +1,42 @@
+.navbar-toggler {
+    border-color: transparent;
+    color: transparent;
+}
+
+.navbar .nav-link {
+    color: #f0f0f0 !important;
+}
+
+.navbar .nav-link.active {
+    background-color: #ff3907; 
+}
+
+.navbar-toggler:active {
+    animation: neonGlow 0.5s infinite alternate;
+}
+
+
+.navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar-transparent {
+    background-color: transparent !important;
+}
+
+.navbar-blue {
+    background: linear-gradient(45deg,#1501c5,#1501c5, #3e024d);/* Cambiar a un tono de morado */
+}
+
+@keyframes neonGlow {
+    from {
+        box-shadow: 0 0 10px #4dff07, 0 0 20px #4dff07, 0 0 30px #4dff07;
+    }
+    to {
+        box-shadow: 0 0 20px #4dff07, 0 0 30px #4dff07, 0 0 40px #4dff07;
+    }
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
