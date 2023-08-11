@@ -8,21 +8,44 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class HeaderComponent {
   isTransparent: boolean = true;
+  private index:string="";
 
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
-      
       if (event instanceof NavigationEnd) {
-        console.log(event.url );
-        this.isTransparent = (event.url === '/home#principal'||event.url === '/home');
+        this.index=String(event.url).split("#")[1] || "";
       }
     });
   }
 
+  isActive(fragment: string):boolean{
+    return (this.index === fragment);
+  }
+
+
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
     const scrollY = window.scrollY;
-    this.isTransparent = scrollY <= 400 && (this.router.url === '/home#principal'||this.router.url === '/home');
+
+    const currentPosition = window.pageYOffset || document.documentElement.scrollTop;
+    const sections = document.querySelectorAll('section'); // Cambia el selector según tu estructura HTML
+
+    let currentSection = null;
+
+    sections.forEach((section: HTMLElement) => {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.clientHeight;
+
+      if (currentPosition >= sectionTop && currentPosition < sectionBottom) {
+        currentSection = section;
+      }
+    });
+
+    if (currentSection) {
+      const cs:HTMLElement=currentSection as HTMLElement;
+      this.index=cs.id;
+      this.isTransparent =  scrollY <= 490 &&(this.index === 'principal'|| this.index === '');
+    }
   }
 
 
