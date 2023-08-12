@@ -12,9 +12,10 @@
 }
 
 .navbar-toggler:active {
-    animation: neonGlow 0.5s infinite alternate;
 }
-
+.navbar-brand img{
+    width: 60px;
+}
 
 .navbar-toggler {
     border-color: transparent;
@@ -25,18 +26,14 @@
 }
 
 .navbar-blue {
-    background: linear-gradient(45deg,#1501c5,#1501c5, #3e024d);/* Cambiar a un tono de morado */
+    background: linear-gradient(40deg,#2801b7, #59018f);
 }
 
-@keyframes neonGlow {
-    from {
-        box-shadow: 0 0 10px #4dff07, 0 0 20px #4dff07, 0 0 30px #4dff07;
-    }
-    to {
-        box-shadow: 0 0 20px #4dff07, 0 0 30px #4dff07, 0 0 40px #4dff07;
-    }
-}
 
-.navbar {
-    transition: background-color 0.3s ease;
+
+@media (max-width: 600px) {
+    .navbar-blue {
+        background: #2801b7 !important;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    }
 }

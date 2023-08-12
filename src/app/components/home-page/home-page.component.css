@@ -14,33 +14,8 @@ p.lead {
     font-size: 1.3rem;
 }
 
-
-#principal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background: linear-gradient(45deg,#1501c5,#1501c5, #3e024d);
-    color: #c9c9c9;
-    min-height: 100vh;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-}
-
-#principal .container {
-    position: relative;
-    z-index: 1;
-}
-
-#principal::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(138deg, #1501c5, #620188);
-    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
-    z-index: 0;
+.main-container{
+    background-color: #e4e4e4;
 }
 
 #proyectos,

@@ -1,0 +1,12 @@
+<section id="contactos" >
+    <div class="container-contact">
+        <form class="form" #formcontact="ngForm" (ngSubmit)="send($event)">
+            <h2 class="title-section">Contacto</h2>
+            <p>Ponte en contacto con nosotros a través de los siguientes medios:</p>
+            <input type="text" placeholder="Nombre" class="input" id="nombre" name="nombre" [(ngModel)]="this.name" #nombre="ngModel"  required>
+            <input type="text" placeholder="Correo electrónico" class="input" id="mailin" name="mailin" [(ngModel)]="this.mail" #mailin="ngModel"   required>
+            <textarea placeholder="Mensaje" id="messagein" name="messagein" [(ngModel)]="this.message" #messagein="ngModel"  required></textarea>
+            <button [disabled]="formcontact.invalid || sending" type="submit" >Enviar</button>
+        </form>
+    </div>
+</section>

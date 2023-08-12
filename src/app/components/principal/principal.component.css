@@ -1,0 +1,113 @@
+#principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 80vh;
+    background: linear-gradient(45deg,#1501c5,#1501c5, #3e024d);
+    color: #c9c9c9;
+    min-height: 100vh;
+    clip-path: polygon(100% 0%, 0% 0% , 0.00% 84.00%, 2.00% 83.95%, 4.00% 83.82%, 6.00% 83.60%, 8.00% 83.29%, 10.00% 82.92%, 12.00% 82.47%, 14.00% 81.97%, 16.00% 81.43%, 18.00% 80.85%, 20.00% 80.25%, 22.00% 79.65%, 24.00% 79.05%, 26.00% 78.48%, 28.00% 77.94%, 30.00% 77.45%, 32.00% 77.02%, 34.00% 76.65%, 36.00% 76.36%, 38.00% 76.15%, 40.00% 76.03%, 42.00% 76.00%, 44.00% 76.06%, 46.00% 76.21%, 48.00% 76.45%, 50.00% 76.76%, 52.00% 77.15%, 54.00% 77.61%, 56.00% 78.12%, 58.00% 78.67%, 60.00% 79.25%, 62.00% 79.85%, 64.00% 80.45%, 66.00% 81.04%, 68.00% 81.61%, 70.00% 82.14%, 72.00% 82.63%, 74.00% 83.05%, 76.00% 83.40%, 78.00% 83.68%, 80.00% 83.87%, 82.00% 83.98%, 84.00% 83.99%, 86.00% 83.92%, 88.00% 83.75%, 90.00% 83.51%, 92.00% 83.18%, 94.00% 82.77%, 96.00% 82.31%, 98.00% 81.79%, 100.00% 81.24%);
+}
+
+#principal .container {
+    position: relative;
+    z-index: 1;
+}
+
+#principal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(138deg, #1501c5, #620188);
+    z-index: 0;
+}
+
+.row-end{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.subtitle{
+    font-size: 1.8rem;
+    font-weight: 320;
+}
+
+.btn {
+    
+    width: 30%;
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 19px;
+    font-weight: 670;
+    color: #1501c5;
+    border: 3px solid #e4e4e4;
+    cursor: pointer;
+    position: relative;
+    background-color: #e4e4e4;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+    border-radius: 0px;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: all .4s ease-out;
+    z-index: -1;
+}
+
+.btn:hover{
+    color: #e4e4e4;
+    transform: scale(1.01);
+    background-color: transparent;
+}
+
+.btn:hover::before {
+    transform: translateX(0);
+}
+
+
+@media (max-width: 600px) {
+    .row-end{
+        margin-top: -150px;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .title{
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+    
+    .subtitle{
+        margin-top: 5px;
+        font-size: 1.3rem;
+        font-weight: 376;
+    }
+    
+    .btn {
+        margin-top: 30px;
+        align-self: center;
+        justify-self: center;
+        width: 92%;
+        font-size: 19px;
+        font-weight: 670;
+    }
+}
