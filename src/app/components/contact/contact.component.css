@@ -36,9 +36,23 @@
     align-items: center;
     justify-content: center;
   }
+
+  .form p{
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+
+  .form .p-note{
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    font-size: 0.7rem;
+    color: rgb(160, 160, 160);
+  }
   
   .form input {
     outline: 0;
+    margin-top: 10px;
     border: 1px solid rgb(219, 213, 213);
     padding: 8px 14px;
     border-radius: 8px;
@@ -55,22 +69,71 @@
     padding: 8px 14px;
     border: 1px solid rgb(219, 213, 213);
   }
-  
-  .form button {
-    margin-top: 20px;
-    align-self: center;
-    width: 30%;
-    padding: 8px;
-    outline: 0;
-    border: 0;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    background-color: royalblue;
-    color: #fff;
-    cursor: pointer;
-  }
-      
+
+
+
+.btn{
+  align-self: center;
+  width: 30%;
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  font-size: 19px;
+  font-weight: 670;
+  color: #e4e4e4;
+  border: 3px solid #1501c5;
+  cursor: pointer;
+  position: relative;
+  background-color: #1501c5;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+  border-radius: 0px;
+}
+
+.btn-primary:disabled
+.btn[disabled]{
+  align-self: center;
+  width: 25%;
+  display: inline-block;
+  padding: 0.5rem 1.4rem;
+  font-size: 19px;
+  font-weight: 670;
+  color: #e4e4e4;
+  border: 3px solid #1501c5;
+  cursor: pointer;
+  position: relative;
+  background-color: #1501c5;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+  border-radius: 0px;
+  opacity: 0.8;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: all .4s ease-out;
+  z-index: -1;
+}
+
+.btn:hover{
+  color: #1501c5;
+  transform: scale(1.01);
+  background-color: #e4e4e4 ;
+}
+
+.btn:hover::before {
+  transform: translateX(0);
+}
+
 
 @media (max-width: 600px) {
     .title-section{

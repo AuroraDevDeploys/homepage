@@ -4,9 +4,22 @@
             <h2 class="title-section">Contacto</h2>
             <p>Ponte en contacto con nosotros a través de los siguientes medios:</p>
             <input type="text" placeholder="Nombre" class="input" id="nombre" name="nombre" [(ngModel)]="this.name" #nombre="ngModel"  required>
-            <input type="text" placeholder="Correo electrónico" class="input" id="mailin" name="mailin" [(ngModel)]="this.mail" #mailin="ngModel"   required>
+            <input 
+                type="text" placeholder="Correo electrónico" class="input" id="mailin" name="mailin" [(ngModel)]="this.mail" #mailin="ngModel" required
+                pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+            >
+            <p class="p-note" *ngIf="mailin.invalid">Por favor agrega un correo electrónico válido*</p>
             <textarea placeholder="Mensaje" id="messagein" name="messagein" [(ngModel)]="this.message" #messagein="ngModel"  required></textarea>
-            <button [disabled]="formcontact.invalid || sending" type="submit" >Enviar</button>
+            <button class="btn" [disabled]="formcontact.invalid || sending" type="submit" >Enviar</button>
         </form>
     </div>
 </section>
+<lib-toastify-toast-container 
+    [iconLibrary]="'none'"
+    [position]="'bottom-right'"
+    [autoClose]="3000"
+    [hideProgressBar]="true"
+    [pauseOnHover]="false"
+>
+
+</lib-toastify-toast-container>
