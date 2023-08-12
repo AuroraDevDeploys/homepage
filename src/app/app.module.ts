@@ -11,7 +11,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ToastService, AngularToastifyModule } from 'angular-toastify'; 
+import { ToastService, AngularToastifyModule } from 'angular-toastify';
+import { FooterComponent } from './components/footer/footer.component'; 
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ToastService, AngularToastifyModule } from 'angular-toastify';
     PrincipalComponent,
     AboutComponent,
     ContactComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
