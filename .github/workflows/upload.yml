@@ -25,7 +25,7 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Upload static files
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v1
         with:
           path: .  # Carpeta que contiene tu sitio web estático
 
