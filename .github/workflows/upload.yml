@@ -2,7 +2,7 @@ name: Deploy static site to GitHub Pages
 
 on:
   push:
-    branches: [main]  # Cambia esto si usas otra rama para desarrollo
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -24,10 +24,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload static files
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: .  # Carpeta que contiene tu sitio web estático
+          path: .
 
   deploy:
     needs: build
