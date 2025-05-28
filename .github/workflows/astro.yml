@@ -27,7 +27,7 @@ jobs:
       - name: Upload static files
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./public  # Carpeta que contiene tu sitio web estático
+          path: ./  # Carpeta que contiene tu sitio web estático
 
   deploy:
     needs: build
